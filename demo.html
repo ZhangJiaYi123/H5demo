@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            display: inline-flex;
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bg div {
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .bg div:nth-child(1) {
+            background: red;
+        }
+
+        .bg div:nth-child(2) {
+            background: blue;
+        }
+
+        .bg div:nth-child(3) {
+            background: black;
+        }
+
+        .bg div:nth-child(4) {
+            background: orange;
+        }
+
+        @media screen and (min-width:1200px) {
+            .bg div {
+                float: left;
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .bg {
+                flex-wrap: wrap;
+                width: 900px;
+            }
+
+            .bg div {
+                float: left;
+                width: 300px;
+            }
+
+            .bg div:nth-child(1) {
+                width: 900px;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .bg {
+                flex-wrap: wrap;
+                width: 600px;
+            }
+
+            .bg div {
+                float: left;
+                width: 300px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .bg {
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 768px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>
